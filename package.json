@@ -20,22 +20,23 @@
         }
     ],
     "viewsContainers": {
-        "activitybar": [
-            {
-                "id": "chatgptai",
-                "title": "ChatGPT AI",
-                "icon": "resources/icon.png"
-            }
-        ]
-    },
-    "views": {
-        "chatgptai": [
-            {
-                "id": "chatgptaiView",
-                "name": "Chat"
-            }
-        ]
-    }
+      "activitybar": [
+          {
+              "id": "chatgptai",
+              "title": "ChatGPT AI",
+              "icon": "resources/icon.png"
+          }
+      ]
+  },
+  "views": {
+      "chatgptai": [
+          {
+              "id": "chatgptaiView",
+              "name": "Chat"
+          }
+      ]
+  }
+  
 },
 
   "scripts": {
