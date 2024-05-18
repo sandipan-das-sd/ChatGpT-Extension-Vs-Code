@@ -2,19 +2,19 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Extension "chatgptai" is now active!');
-    
-    const startCommand = vscode.commands.registerCommand('chatgptai.start', () => {
-        console.log('ChatGPT AI command executed');
-        
-        const panel = vscode.window.createWebviewPanel(
-            'chatgptai',
-            'ChatGPT AI Chat',
-            vscode.ViewColumn.One,
-            {}
-        );
-
-        panel.webview.html = getWebviewContent();
-    });
+	const startCommand = vscode.commands.registerCommand('chatgptai.start', () => {
+		console.log('ChatGPT AI command executed');
+		
+		const panel = vscode.window.createWebviewPanel(
+			'chatgptaiView', // This should match the view ID
+			'ChatGPT AI Chat',
+			vscode.ViewColumn.One,
+			{}
+		);
+	
+		panel.webview.html = getWebviewContent();
+	});
+	
 
     context.subscriptions.push(startCommand);
 }
@@ -79,4 +79,6 @@ function getWebviewContent() {
     </html>`;
 }
 
-export function deactivate() {}
+export function deactivate() {
+    console.log('Extension "chatgptai" is now deactivated!');
+}

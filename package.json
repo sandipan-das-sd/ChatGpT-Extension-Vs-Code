@@ -6,39 +6,40 @@
   "engines": {
     "vscode": "^1.89.0"
   },
-  
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:chatgptai.start",
+    "onView:chatgptaiView"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-        {
-            "command": "chatgptai.start",
-            "title": "Start ChatGPT AI"
-        }
+      {
+        "command": "chatgptai.start",
+        "title": "Start ChatGPT AI"
+      }
     ],
     "viewsContainers": {
       "activitybar": [
-          {
-              "id": "chatgptai",
-              "title": "ChatGPT AI",
-              "icon": "resources/icon.png"
-          }
+        {
+          "id": "chatgptai",
+          "title": "ChatGPT AI",
+          "icon": "src/resources/icon.png"
+        }
       ]
-  },
-  "views": {
+    },
+    "views": {
       "chatgptai": [
-          {
-              "id": "chatgptaiView",
-              "name": "Chat"
-          }
+        {
+          "id": "chatgptaiView",
+          "name": "Chat"
+        }
       ]
-  }
-  
-},
-
+    }
+    
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
